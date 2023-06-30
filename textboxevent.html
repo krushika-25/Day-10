@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text Boxs Events</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function(){
+
+           $("#txttestfocus").focus(function(){
+              $(this).css("background-color","plum");
+           });
+
+           $("#txttestblur").blur(function(){
+              $(this).css("background-color","greenyellow");
+           });
+
+           $("#txttestkeypress").keypress(function(){
+              alert($(this).val());
+           });
+
+           $("#txttestkeyup").keyup(function(){
+              alert($(this).val());
+           });
+
+        });
+    </script>
+</head>
+<body>
+    
+<input type="text" id="txttestfocus" placeholder="check text focus"><br><br>
+<input type="text" id="txttestblur" placeholder="check text blur"><br><br>
+<input type="text" id="txttestkeypress" placeholder="check text key press"><br><br>
+<input type="text" id="txttestkeyup" placeholder="check text key up"><br>
+
+</body>
+</html>
